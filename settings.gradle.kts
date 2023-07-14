@@ -1,1 +1,3 @@
-rootProject.name = "companion-object"
+rootProject.name = "stunning-guacamole"
+
+include("companion-object")
