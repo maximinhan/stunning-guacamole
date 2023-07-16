@@ -7,5 +7,5 @@ import org.mapstruct.factory.Mappers;
 interface JavaDtoToEntityMapper {
     JavaDtoToEntityMapper INSTANCE = Mappers.getMapper(JavaDtoToEntityMapper.class);
 
-    JavaEntityClass toMessageBodyDto(JavaDtoClass dtoClass);
+    JavaEntityClass toEntity(JavaDtoClass dtoClass);
 }

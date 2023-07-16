@@ -12,5 +12,7 @@ interface KotlinDtoToEntityMapper {
         )
     }
 
-    fun toMessageBodyDto(dtoClass: KotlinDtoClass): KotlinEntityClass?
+    fun toEntity(dtoClass: KotlinDtoClass): KotlinEntityClass?
+
+    fun toDto(entityClass: KotlinEntityClass): KotlinDtoClass
 }

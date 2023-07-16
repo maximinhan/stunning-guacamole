@@ -8,11 +8,5 @@ data class KotlinEntityClass(
     val sender: String,
     val receiver: List<String>,
     val requestTime: LocalDateTime,
-    var type: PerformanceType,
-    var memo: String,
+    var type: String
 )
-
-enum class PerformanceType {
-    CONCERT,
-    EXHIBITION
-}

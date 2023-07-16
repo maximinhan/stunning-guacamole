@@ -15,6 +15,8 @@ public class JavaSampleService {
     public void doSomething() throws InterruptedException {
         logger.info("무언가를 합니다.");
 
+        LocalDateTime requestTime = LocalDateTime.of(2022, 9, 17,19, 0);
+
         List<String> receivers = new ArrayList<>();
         receivers.add("유애나");
 
@@ -24,13 +26,12 @@ public class JavaSampleService {
         dtoClass.setSender("IU");
         dtoClass.setType("Concert");
         dtoClass.setReceiver(receivers);
-        dtoClass.setRequestTime(LocalDateTime.of(2022, 9, 17,19, 0));
+        dtoClass.setRequestTime(requestTime);
 
         for (int i = 0; i < 100000; i++) {
-            JavaEntityClass entityClass = JavaDtoToEntityMapper.INSTANCE.toMessageBodyDto(dtoClass);
+            JavaEntityClass entityClass = JavaDtoToEntityMapper.INSTANCE.toEntity(dtoClass);
         }
 
-        logger.info("힙덤프 시점");
         Thread.sleep(5000L);
     }
 }

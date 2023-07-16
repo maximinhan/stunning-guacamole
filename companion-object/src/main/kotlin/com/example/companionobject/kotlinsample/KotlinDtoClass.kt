@@ -8,6 +8,5 @@ data class KotlinDtoClass(
     val sender: String,
     val receiver: List<String>,
     val requestTime: LocalDateTime,
-    val type: String,
-    val memo: String,
+    val type: String
 )
